@@ -9,7 +9,7 @@ maxRowlen = 4
 
 wgc.loadMaps()
 wgc.loadCountries()
-players = 0
+wgc.initializePlayers(2)
 
 
 root = Tk()
@@ -22,7 +22,7 @@ def runScript():
     map = wgc.rollmap(2)
     ttk.Label(frm, text=(map["Name"],map["Size(Given)"],map["Type"])).grid(column=1, row=0)
     
-    wgc.initializePlayers(2)
+    wgc.rerollplayers()
     wgc.addAllowedCountires()
     for i,player in enumerate(wgc.players):
         ttk.Label(frm, text=("Player",i+1,":")).grid(column=0, row=i+2)
