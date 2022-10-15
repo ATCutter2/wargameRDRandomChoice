@@ -9,23 +9,6 @@ enableCoalitions = 1
 #END Changable Variables
 
 forces = ["Redfor","Bluefor"]
-maps1v1Legacy= [
-            "(1v1) Tropic Thunder            ",
-            "(1v1) Mud Fight !               ",
-            "(1v1) Nuclear Winter is Coming  ",
-            "(1v1) Wonsan Harbour            ",
-            "(1v1) Plunjing Valley           ",
-            "(1v1) Death Row                 ",
-            "(1v1) Paddy Field               ",
-            "(1v1) Punchbowl                 ",
-            "(1v1) Hell in a very small place",
-            "(1v1) Strait to the Point       ",
-            "(1v1 Mixed) Wonsan Harbour      ",
-            "(2v2) Highway to Seoul          ",
-            "(4v4) Cold War Z                ",
-            "(4v4 Mixed) Smoke in the water  "
-            ]
-
 #Load Maps
 maps1v1 = []
 enumPvPNumbers = ["(1v1)"]
@@ -94,7 +77,7 @@ if __name__ == "__main__":
     print("map:",map["Name"],map["Size(Given)"],map["Type"])
     #print(specialisation)
     specializationArray = [0,0,0,0,0,0,0]
-    for p in players:
+    for i,p in enumerate(players):
         ##visualize what  colummn is chosen
         #choosenSpezialisation = specializationArray
         #choosenSpezialisation[p["specialisationNr"]] = 1
