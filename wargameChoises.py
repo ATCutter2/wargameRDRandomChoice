@@ -31,9 +31,10 @@ def loadMaps() :
 map = {}
 def rollmap(playercount=2):
     maps = []
-    if (math.floor(playercount/2)-1) >= 1:
+    if (math.floor(playercount/2)) >= 1:
         maps = maps1v1        
     map = random.choice(maps)
+    return map
     
 #Load Countries
 colummnamesFactionlist = []
@@ -90,10 +91,10 @@ def addAllowedCountires(enableCoalitions=1):
 if __name__ == "__main__":
     loadMaps()
     loadCountries()   
-    rollmap(2) 
+    map = rollmap(2) 
     initializePlayers(2)
     addAllowedCountires()
-    
+    print(map)
     print("map:",map["Name"],map["Size(Given)"],map["Type"])
     #print(specialisation)
     specializationArray = [0,0,0,0,0,0,0]
