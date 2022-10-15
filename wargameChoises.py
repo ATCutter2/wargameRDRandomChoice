@@ -66,17 +66,17 @@ def initializePlayers(playercount=2):
     for i in range(0,playercount):
         specialisationNr = specialisation.index(random.choice(specialisation))
         faction = random.choice(factions)
-        players.append({"faction":faction,
-                        "specialisation":specialisation[specialisationNr],
+        players.append({"faction"         :faction,
+                        "specialisation"  :specialisation[specialisationNr],
                         "specialisationNr":specialisationNr}
                        )
 def rerollplayers():
     for p in players:
         specialisationNr = specialisation.index(random.choice(specialisation))
         faction = random.choice(factions)
-        p = {"faction":faction,
-                        "specialisation":specialisation[specialisationNr],
-                        "specialisationNr":specialisationNr}
+        p = {"faction"         :faction,
+             "specialisation"  :specialisation[specialisationNr],
+             "specialisationNr":specialisationNr}
                        
 #add allowed Counties needs Players
 def addAllowedCountires(enableCoalitions=1):
