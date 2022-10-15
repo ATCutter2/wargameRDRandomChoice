@@ -1,0 +1,36 @@
+﻿Faction;is Coalition;Coalition;MOTORIZED;ARMORED;SUPPORT;MARINES;MECHANIZED;AIRBORNE;UnSPEC
+Bluefor;1;NATO              ;1;1;1;1;1;1;1
+Bluefor;1;Blue Dragons      ;1;1;1;1;1;1;1
+Bluefor;1;Commonwealth      ;1;1;1;1;1;1;1
+Bluefor;1;Dutch German Corps;1;1;1;0;1;1;1
+Bluefor;1;Eurocorps         ;1;1;1;1;1;1;1
+Bluefor;1;Landjut           ;1;1;1;0;1;1;1
+Bluefor;1;Norad             ;1;1;1;1;1;1;1
+Bluefor;1;Scandinavia       ;1;1;1;1;1;1;1
+Bluefor;0;ANZAC             ;1;1;1;0;1;1;1
+Bluefor;0;Canada            ;1;1;1;0;1;1;1
+Bluefor;0;Denmark           ;0;1;1;0;1;0;1
+Bluefor;0;France            ;1;1;1;1;1;1;1
+Bluefor;0;Israel            ;1;1;1;1;1;1;1
+Bluefor;0;Japan             ;1;1;1;0;1;1;1
+Bluefor;0;Netherlands       ;1;1;1;0;1;0;1
+Bluefor;0;Norway            ;1;1;1;0;1;1;1
+Bluefor;0;South Africa      ;1;1;1;1;0;1;1
+Bluefor;0;South Korea       ;1;1;1;1;1;1;1
+Bluefor;0;Sweden            ;1;1;1;0;1;0;1
+Bluefor;0;USA               ;1;1;1;1;1;1;1
+Bluefor;0;UK                ;1;1;1;1;1;1;1
+Bluefor;0;West Germany      ;1;1;1;0;1;1;1
+Redfor ;1;Redfor            ;1;1;1;1;1;1;1
+Redfor ;1;Baltic Front      ;1;1;1;1;1;1;1
+Redfor ;1;Eastern Block     ;1;1;1;1;1;1;1
+Redfor ;1;Entente           ;1;1;1;1;1;1;1
+Redfor ;1;Red Dragons       ;1;1;1;1;1;1;1
+Redfor ;0;USSR              ;1;1;1;1;1;1;1
+Redfor ;0;China             ;1;1;1;1;1;1;1
+Redfor ;0;Czechoslovakia    ;1;1;1;0;1;1;1
+Redfor ;0;East Germany      ;1;1;1;0;1;1;1
+Redfor ;0;Finland           ;1;1;1;1;1;0;1
+Redfor ;0;NorthKorea        ;1;1;1;1;1;1;1
+Redfor ;0;Poland            ;1;1;1;1;1;1;1
+Redfor ;0;Yugoslavia        ;1;1;1;1;1;1;1
