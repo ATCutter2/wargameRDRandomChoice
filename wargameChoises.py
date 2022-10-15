@@ -8,12 +8,12 @@ import math
 #enableCoalitions = 1
 #END Changable Variables
 
-forces = ["Redfor","Bluefor"]
+
 #Load Maps
 maps1v1 = []
 enumPvPNumbers = ["(1v1)"]
 colummnamesMaps = []
-def loadMaps() :
+def loadMaps(playercount) :
     with open('WargameRDMaps.csv', mode='r') as infile:
         reader = csv.reader(infile,delimiter=';')
         line_count = 0
@@ -27,18 +27,18 @@ def loadMaps() :
                                     "Size(Given)":rows[2],
                                     "Type":rows[3:]})
 
-
 #Load Countries
-colummnames = []
+colummnamesFactionlist = []
 specialisation = []
 force = []
+factions = []#["Redfor","Bluefor"]
 def loadCountries():
     with open('Factionlist.csv', mode='r') as infile:
         reader = csv.reader(infile,delimiter=';')
         line_count = 0
         for i,rows in enumerate(reader): 
             if i == 0:
-                colummnames.append(rows[:])
+                colummnamesFactionlist.extend(rows[:])
                 for spec in range(3,len(rows)):
                     specialisation.append(rows[spec])    
                 continue
@@ -47,20 +47,22 @@ def loadCountries():
                               "isCoalition":rows[1],
                               "Coalition":rows[2],
                               "specialisation":rows[3:]})
+    for f in force:
+        if f["faction"] not in factions:
+            factions.append(f["faction"])
 
-
-#Initialize players
+#Initialize players needs countries
 players = []
 def initializePlayers(playercount=2):
     for i in range(0,playercount):
         specialisationNr = specialisation.index(random.choice(specialisation))
-        faction = random.choice(forces)
+        faction = random.choice(factions)
         players.append({"faction":faction,
                         "specialisation":specialisation[specialisationNr],
                         "specialisationNr":specialisationNr}
                        )
 
-#add allowed Counties
+#add allowed Counties needs Players
 def addAllowedCountires(enableCoalitions=1):
     for i,p in enumerate(players):
        #find allowed Countries
@@ -78,8 +80,8 @@ def addAllowedCountires(enableCoalitions=1):
     
 
 if __name__ == "__main__":
-    loadMaps()
-    loadCountries()
+    loadMaps(2)
+    loadCountries()    
     initializePlayers(2)
     addAllowedCountires()
     map = random.choice(maps1v1)
