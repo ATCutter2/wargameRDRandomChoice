@@ -13,7 +13,7 @@ import math
 maps1v1 = []
 enumPvPNumbers = ["(1v1)"]
 colummnamesMaps = []
-def loadMaps(playercount) :
+def loadMaps() :
     with open('WargameRDMaps.csv', mode='r') as infile:
         reader = csv.reader(infile,delimiter=';')
         line_count = 0
@@ -21,12 +21,20 @@ def loadMaps(playercount) :
             if i == 0:
                 colummnamesMaps.append(rows[:])
             else:
-                if rows[1] == enumPvPNumbers[math.floor(playercount/2)-1]:
+                #TODO Modify for all maps adjust roll maps
+                if rows[1] == enumPvPNumbers[0]:
                     maps1v1.append({"Name":rows[0],
                                     "Size(usable as)":rows[1],
                                     "Size(Given)":rows[2],
                                     "Type":rows[3:]})
 
+map = {}
+def rollmap(playercount=2):
+    maps = []
+    if (math.floor(playercount/2)-1) >= 1:
+        maps = maps1v1        
+    map = random.choice(maps)
+    
 #Load Countries
 colummnamesFactionlist = []
 specialisation = []
@@ -80,11 +88,12 @@ def addAllowedCountires(enableCoalitions=1):
     
 
 if __name__ == "__main__":
-    loadMaps(2)
-    loadCountries()    
+    loadMaps()
+    loadCountries()   
+    rollmap(2) 
     initializePlayers(2)
     addAllowedCountires()
-    map = random.choice(maps1v1)
+    
     print("map:",map["Name"],map["Size(Given)"],map["Type"])
     #print(specialisation)
     specializationArray = [0,0,0,0,0,0,0]
