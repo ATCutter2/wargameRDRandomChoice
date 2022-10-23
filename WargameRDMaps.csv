@@ -1,15 +1,15 @@
-﻿Name;Size(usable as);Size(Given);Type
-Tropic Thunder ;(1v1);(1v1);Land
-Mud Fight !               ;(1v1);(1v1);Land
-Nuclear Winter is Coming  ;(1v1);(1v1);Land
-Wonsan Harbour            ;(1v1);(1v1);Land
-Plunjing Valley           ;(1v1);(1v1);Land
-Death Row                 ;(1v1);(1v1);Land
-Paddy Field               ;(1v1);(1v1);Land
-Punchbowl                 ;(1v1);(1v1);Land
-Hell in a very small place;(1v1);(1v1);Land
-Strait to the Point       ;(1v1);(1v1);Land
-Wonsan Harbour      ;(1v1);(1v1 Mixed);Mixed
-Highway to Seoul          ;(1v1);(2v2);Land
-Cold War Z                ;(1v1);(4v4);Land
-Smoke in the water;(1v1);(4v4 Mixed);Mixed
+﻿Name;Players per Side;Recommended Players per Side;Type
+Tropic Thunder            ;1;1;Land
+Mud Fight !               ;1;1;Land
+Nuclear Winter is Coming  ;1;1;Land
+Wonsan Harbour            ;1;1;Land
+Plunjing Valley           ;1;1;Land
+Death Row                 ;1;1;Land
+Paddy Field               ;1;1;Land
+Punchbowl                 ;1;1;Land
+Hell in a very small place;1;1;Land
+Strait to the Point       ;1;1;Land
+Wonsan Harbour            ;1;1;Mixed
+Highway to Seoul          ;1;2;Land
+Cold War Z                ;1;4;Land
+Smoke in the water        ;1;4;Mixed

@@ -1,7 +1,8 @@
 
+import fractions
 import numpy as np
 import random
-import csv
+import pandas as pd
 import math
 #Changable Variables
 #playercount = 2
@@ -10,29 +11,12 @@ import math
 
 
 #Load Maps
-maps1v1 = []
-enumPvPNumbers = ["(1v1)"]
-colummnamesMaps = []
-def loadMaps() :
-    with open('WargameRDMaps.csv', mode='r') as infile:
-        reader = csv.reader(infile,delimiter=';')
-        line_count = 0
-        for i,rows in enumerate(reader): 
-            if i == 0:
-                colummnamesMaps.append(rows[:])
-            else:
-                #TODO Modify for all maps adjust roll maps
-                if rows[1] == enumPvPNumbers[0]:
-                    maps1v1.append({"Name":rows[0],
-                                    "Size(usable as)":rows[1],
-                                    "Size(Given)":rows[2],
-                                    "Type":rows[3:]})
 
-map = {}
+def loadMaps() :
+    maps  = pd.read_csv('WargameRDMaps.csv',delimiter=";",index_col=0)
+
 def rollmap(playercount=2):
-    maps = []
-    if (math.floor(playercount/2)) >= 1:
-        maps = maps1v1        
+    maps = maps[maps["Players per Side"] >= (math.floor(playercount/2))]        
     map = random.choice(maps)
     return map
     
@@ -40,25 +24,29 @@ def rollmap(playercount=2):
 colummnamesFactionlist = []
 specialisation = []
 force = []
-factions = []#["Redfor","Bluefor"]
+factions = []
 def loadCountries():
-    with open('Factionlist.csv', mode='r') as infile:
-        reader = csv.reader(infile,delimiter=';')
-        line_count = 0
-        for i,rows in enumerate(reader): 
-            if i == 0:
-                colummnamesFactionlist.extend(rows[:])
-                for spec in range(3,len(rows)):
-                    specialisation.append(rows[spec])    
-                continue
-            else:
-                force.append({"faction":rows[0],
-                              "isCoalition":rows[1],
-                              "Coalition":rows[2],
-                              "specialisation":rows[3:]})
-    for f in force:
-        if f["faction"] not in factions:
-            factions.append(f["faction"])
+    factions= pd.read_csv('Factionlist.csv',delimiter=";",index_col=0)
+    specialisations = factions.columns[2:]
+    for sp in specialisations:
+        
+    
+  #      reader = csv.reader(infile,delimiter=';')
+  #      line_count = 0
+  #      for i,rows in enumerate(reader): 
+  #          if i == 0:
+  #              colummnamesFactionlist.extend(rows[:])
+  #              for spec in range(3,len(rows)):
+  #                  specialisation.append(rows[spec])    
+  #              continue
+  #          else:
+  #              force.append({"faction":rows[0],
+  #                            "isCoalition":rows[1],
+  #                            "Coalition":rows[2],
+  #                            "specialisation":rows[3:]})
+  #  for f in force:
+  #      if f["faction"] not in factions:
+  #          factions.append(f["faction"])
 
 #Initialize players needs countries
 players = []
