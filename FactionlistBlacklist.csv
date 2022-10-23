@@ -1,0 +1,36 @@
+﻿Faction;Side;is Coalition;MOTORIZED;ARMORED;SUPPORT;MARINES;MECHANIZED;AIRBORNE;UnSPEC
+NATO              ;Blufor;1;0;0;0;0;0;0;0
+Blue Dragons      ;Blufor;1;0;0;0;0;0;0;0
+Commonwealth      ;Blufor;1;0;0;0;0;0;0;0
+Dutch German Corps;Blufor;1;0;0;0;0;0;0;0
+Eurocorps         ;Blufor;1;0;0;0;0;0;0;0
+Landjut           ;Blufor;1;0;0;0;0;0;0;0
+NORAD             ;Blufor;1;0;0;0;0;0;0;0
+Scandinavia       ;Blufor;1;0;0;0;0;0;0;0
+ANZAC             ;Blufor;0;0;0;0;0;0;0;0
+Canada            ;Blufor;0;0;0;0;0;0;0;0
+Denmark           ;Blufor;0;0;0;0;0;0;0;0
+France            ;Blufor;0;0;0;0;0;0;0;0
+Israel            ;Blufor;0;0;0;0;0;0;0;0
+Japan             ;Blufor;0;0;0;0;0;0;0;0
+Netherlands       ;Blufor;0;0;0;0;0;0;0;0
+Norway            ;Blufor;0;0;0;0;0;0;0;0
+South Africa      ;Blufor;0;0;0;0;0;0;0;0
+South Korea       ;Blufor;0;0;0;0;0;0;0;0
+Sweden            ;Blufor;0;0;0;0;0;0;0;0
+USA               ;Blufor;0;0;0;0;0;0;0;0
+UK                ;Blufor;0;0;0;0;0;0;0;0
+West Germany      ;Blufor;0;0;0;0;0;0;0;0
+Redfor            ;Redfor;1;0;0;0;0;0;0;0
+Baltic Front      ;Redfor;1;0;0;0;0;0;0;0
+Eastern Block     ;Redfor;1;0;0;0;0;0;0;0
+Entente           ;Redfor;1;0;0;0;0;0;0;0
+Red Dragons       ;Redfor;1;0;0;0;0;0;0;0
+USSR              ;Redfor;0;0;0;0;0;0;0;0
+China             ;Redfor;0;0;0;0;0;0;1;0
+Czechoslovakia    ;Redfor;0;0;0;0;0;0;0;0
+East Germany      ;Redfor;0;0;0;0;0;0;0;0
+Finland           ;Redfor;0;0;0;0;0;0;0;0
+North Korea       ;Redfor;0;0;0;0;0;0;0;0
+Poland            ;Redfor;0;0;0;0;0;0;0;0
+Yugoslavia        ;Redfor;0;0;0;0;0;0;0;0
