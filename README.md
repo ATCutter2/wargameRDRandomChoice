@@ -3,6 +3,7 @@ A pythonscript to choose the players faction, deck and map to play
 
 
 ## TODO
-- [ ] Sometimes it crashes i do not know why Is in loading elligble factions
 - [ ] Make exclude list
 - [ ] Gui for easier execution
+- [ ] allow for more than 2 players
+- [ ] find out how to open guy by doubleclicking on file
