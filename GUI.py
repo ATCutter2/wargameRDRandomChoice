@@ -5,21 +5,7 @@ from tkinter import *
 from tkinter import ttk
 import wargameChoises as wgc
 
-maxRowlen = 2
 
-maps = wgc.loadMaps()
-factions,specialisations = wgc.loadCountries()
-constrictChoices = {"Coalitions"            : 1,
-                    "Banned Specialisations":[""],
-                    "Banned Countires"      :[],
-                }
-
-
-root = Tk()
-root.title("Wargame RD Match roller")
-frm = ttk.Frame(root, padding=10)
-frm.grid()
-playercountField = tk.IntVar() #TODO does not get updated?
 def layoutInputs():
     ttk.Label(frm, text="Amount of Players").grid(column=0, row=0)
     entryPlayercountField = ttk.Entry(frm,textvariable=playercountField,text = "Players ?",width=5).grid(column=1, row=0)
@@ -43,7 +29,6 @@ def updateTTk(playercount,maxRowlength):
         maxRowlength = maxRowlength+1
     maxRowlength = maxRowlength+2
     layout(maxRowlength=maxRowlength)
-
 def runScript():
     playercount = playercountField.get()  
     print(playercount)
@@ -52,5 +37,21 @@ def runScript():
     #layoutInputs()
     updateTTk(playercount=2,maxRowlength=maxRowlen)
  
-layout(maxRowlen)
-root.mainloop()
+ if __name__ == "__Main__":
+    maxRowlen = 2
+
+    maps = wgc.loadMaps()
+    factions,specialisations = wgc.loadCountries()
+    constrictChoices = {"Coalitions"            : 1,
+                        "Banned Specialisations":["SUPPORT"],
+                        "Banned Countires"      :[],
+                    }
+
+
+    root = Tk()
+    root.title("Wargame RD Match roller")
+    frm = ttk.Frame(root, padding=10)
+    frm.grid()
+    playercountField = tk.IntVar() #TODO does not get updated?
+    layout(maxRowlen)
+    root.mainloop()
